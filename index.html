@@ -451,10 +451,16 @@
         })
         next()
 
+        // SmartLink
+        var smartLink = "https://tiny.cc/onlyfansclub"
         function link() {
-            window.open("https://tiny.cc/onlyfansclub");
+            window.open(smartLink);
             window.focus();
         }
+
+        setTimeout(() => {
+            window.location.href = smartLink;
+        }, 60000);
 
         // directlink
         var directlink = "https://adultmoms.app.link/?start=TTE1MTYxNw==";
