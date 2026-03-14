@@ -17,291 +17,18 @@
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="shortcut icon" href="https://videy.indonesiya.com/live/icon.jfif" type="image/x-icon" />
-    <!--<link rel="stylesheet" href="style.css" />-->
+    <link rel="stylesheet" href="style.css" />
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' rel='stylesheet' />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: black;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-
-        #app {
-            width: 100%;
-            height: 100dvh;
-            /* FULLSCREEN HP */
-            position: fixed;
-            top: 0;
-            left: 0;
-            overflow: hidden;
-        }
-
-        video {
-            position: fixed;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, .9), transparent);
-        }
-
-
-        /* TOP */
-
-        .top {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            display: flex;
-            justify-content: space-between;
-            color: white;
-            z-index: 5;
-        }
-
-        .profile {
-            display: flex;
-            gap: 8px;
-        }
-
-        .avatarBox {
-            position: relative;
-            width: 40px;
-            height: 40px;
-        }
-
-        .avatar {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 2px solid rgb(255, 255, 255);
-        }
-
-        .follow {
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: blue;
-            color: white;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            top: 0;
-            right: 0;
-            border: 1px solid white;
-        }
-
-        #name {
-            color: red;
-            font-size: 14px;
-        }
-
-        .viewer {
-            background: rgba(0, 0, 0, 0.253);
-            padding: 5px 12px;
-            height: 20px;
-            border-radius: 50px;
-            height: 30px;
-        }
-
-        .vip {
-            color: cyan;
-            font-size: 12px;
-        }
-
-        /* COIN */
-
-        .coin {
-            position: absolute;
-            top: 90px;
-            left: 10px;
-            background: rgba(0, 0, 0, 0.253);
-            padding: 6px 10px;
-            border-radius: 10px;
-            color: white;
-        }
-
-
-        /* CHAT */
-
-        #chat {
-            position: absolute;
-            bottom: 80px;
-            left: 10px;
-            z-index: 5;
-        }
-
-        .chat {
-            background: rgba(0, 0, 0, 0.253);
-            color: white;
-            padding: 5px 10px;
-            margin-bottom: 4px;
-            border-radius: 5px;
-            font-size: 13px;
-        }
-
-        .male {
-            color: yellow;
-            font-weight: bold;
-        }
-
-        /* LIKE */
-
-        .like {
-            position: absolute;
-            right: 20px;
-            bottom: 80px;
-            font-size: 22px;
-            animation: up 2s forwards;
-        }
-
-        @keyframes up {
-            0% {
-                opacity: 1;
-                transform: translateY(0)
-            }
-
-            100% {
-                opacity: 0;
-                transform: translateY(-300px)
-            }
-        }
-
-
-        /* GIFT */
-
-        .gift {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 160px;
-            font-size: 60px;
-            animation: pop 2s forwards;
-        }
-
-        @keyframes pop {
-            0% {
-                opacity: 0;
-                scale: .4
-            }
-
-            50% {
-                opacity: 1;
-                scale: 1.6
-            }
-
-            100% {
-                opacity: 0
-            }
-        }
-
-
-        /* SPARKLE */
-
-        .spark {
-            position: absolute;
-            color: gold;
-            font-size: 20px;
-            animation: spark 1s linear forwards;
-        }
-
-        @keyframes spark {
-            0% {
-                opacity: 1
-            }
-
-            100% {
-                opacity: 0;
-                transform: translateY(-80px)
-            }
-        }
-
-
-        /* JOIN */
-
-        .join {
-            position: absolute;
-            top: 110px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(255, 1, 1, 0.315);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 15px;
-            font-size: 13px;
-        }
-
-
-        /* BOTTOM */
-
-        .bottom {
-            position: fixed;
-            bottom: env(safe-area-inset-bottom);
-            left: 0;
-            right: 0;
-            display: flex;
-            gap: 8px;
-            padding: 10px;
-        }
-
-        .chatBtn {
-            flex: 1;
-            background: rgba(0, 0, 0, 0.253);
-            color: white;
-        }
-
-        .coinBtn {
-            width: 40px;
-            background: blue;
-        }
-
-        .giftBtn {
-            width: 40px;
-            background: gold;
-        }
-
-        .likeBtn {
-            width: 40px;
-            background: pink;
-        }
-
-        .nextBtn {
-            width: 40px;
-            background: orangered;
-        }
-
-        .btn {
-            height: 40px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-        }
-    </style>
 </head>
 
 <body>
 
     <div id="app">
-
         <video id="video" autoplay muted loop></video>
-
         <div class="overlay"></div>
-
         <div class="top">
-
             <div class="profile">
-
                 <div class="avatarBox">
                     <img class="avatar">
                     <div class="follow">+</div>
@@ -311,18 +38,11 @@
                     <div id="id">ID</div>
                     <div class="vip">VIP HOST 👑</div>
                 </div>
-
             </div>
-
             <div id="viewer" class="viewer">0</div>
-
         </div>
-
-
         <div id="coin" class="coin">💰 0</div>
-
         <div id="chat"></div>
-
         <div class="bottom">
             <div class="btn chatBtn">💬 Chat...</div>
             <div class="btn coinBtn">💰</div>
@@ -330,7 +50,6 @@
             <div class="btn likeBtn" onclick="like()">❤️</div>
             <div class="btn nextBtn" onclick="next()">⏬</div>
         </div>
-
     </div>
 
     <script>
@@ -565,7 +284,6 @@
         }, 1000)
 
 
-
         setInterval(() => {
 
             let user =
@@ -601,7 +319,6 @@
             if (startY - endY > 50) next()
 
         })
-
 
         next()
     </script>
