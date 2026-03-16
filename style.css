@@ -132,26 +132,35 @@ video {
 
 /* LIKE */
 
-.like {
-    position: absolute;
-    right: 20px;
-    bottom: 80px;
-    font-size: 22px;
-    animation: up 2s forwards;
+#like-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
 }
 
-@keyframes up {
+.like {
+    position: absolute;
+    bottom: 0;
+    font-size: 24px;
+    animation: floatUp 3s linear forwards;
+    color: red;
+}
+
+@keyframes floatUp {
     0% {
+        transform: translateY(0) scale(1);
         opacity: 1;
-        transform: translateY(0)
     }
 
     100% {
+        transform: translateY(-300px) scale(1.5);
         opacity: 0;
-        transform: translateY(-300px)
     }
 }
-
 
 /* GIFT */
 
